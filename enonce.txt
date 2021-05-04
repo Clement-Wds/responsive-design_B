@@ -1,0 +1,5 @@
+1/ Intégrer dans le header un logo + mettre en forme le header
+2/ Mettre en forme le Hero - l'image touche la ligne de flotaison de la page
+3/ Mettre en forme le abotu (image à gauche / texte a droite)
+4/ Faire une grille de produit du Eshop
+5/ Mettre en forme le footer
