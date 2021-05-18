@@ -179,6 +179,7 @@ h2 {
     width: 50px;
     height: 25px;
     position: relative;
+    display: none;
 }
 
 .burger__menu .line {
@@ -213,6 +214,10 @@ h2 {
     top: 50%;
 }
 
+.header__nav.active {
+    right: 0%;
+}
+
 @media(max-width:768px) {
     .eshop__grid {
         grid-template-columns: 1fr 1fr;
@@ -232,13 +237,32 @@ h2 {
         padding-left: 0px;
     }
     .header__nav {
-        display: none;
+        z-index: 9999;
+        position: fixed;
+        height: 100%;
+        width: 70%;
+        right: -100%;
+        background: white;
+        top: 0%;
+        transition: 0.3s all;
     }
     .header__nav .nav__item {
         margin: 0px 5px;
     }
     .header__nav .nav__list .nav__link {
         font-size: 15px;
+    }
+    .burger__menu {
+        display: block;
+    }
+    .header__nav .nav__list {
+        display: block;
+    }
+    .header__nav .nav__item {
+        margin: 20px;
+    }
+    .header__nav .nav__list .nav__link {
+        font-size: 20px;
     }
 }
 
