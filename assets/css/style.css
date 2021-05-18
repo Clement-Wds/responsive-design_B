@@ -140,6 +140,9 @@ h2 {
     opacity: 0;
 }
 
+
+/* calque qui va s'afficher au survol d'une cazrd product (initialement opaicté zero - invisible)*/
+
 .product__item .product__overlay {
     position: absolute;
     width: 100%;
@@ -150,10 +153,16 @@ h2 {
     transition: 0.3s all;
 }
 
+
+/* Quand on passe au survol la classe product item, on va targetter le product__overlay et lui mettre une opacité à 1 (visible) */
+
 .product__item:hover .product__overlay {
     opacity: 1;
     transition: 0.3s all;
 }
+
+
+/* idem on affiche le bouton */
 
 .product__item:hover .btn {
     opacity: 1;
@@ -191,28 +200,64 @@ h2 {
     transition: 0.3s all;
 }
 
+
+/* last of type : dernier élemnt d'une liste */
+
 .burger__menu .line:last-of-type {
     bottom: 0%;
 }
+
+
+/* nth of type : deuxième élemnt d'une liste */
 
 .burger__menu .line:nth-of-type(2) {
     top: 50%;
     transform: translateY(-50%);
 }
 
+
+/* first of type : premier élemnt d'une liste */
+
+
+/* ici on ajoute à l'aide du JS la classe active, ce qui permet de faire animer la barre du haute */
+
+
+/* rotate ? faire une rotation de la ligne pour faire la première barre de la croix */
+
+
+/* top ?  pour que la barre soit au milieu du burger Menu*/
+
+
+/* translate 50%  pour que la barre soit centrée en son centre*/
+
 .burger__menu.active .line:first-of-type {
     transform: rotate( 45deg) translateY(50%);
     top: 50%;
 }
 
+
+/* On enlève la barre du milieu */
+
 .burger__menu.active .line:nth-of-type(2) {
     opacity: 0;
 }
+
+
+/* meême chose que le fist of type mais à l'inverse, la barre est dans l'autre sens et forme une croix avec l'autre */
 
 .burger__menu.active .line:last-of-type {
     transform: rotate( -45deg) translateY(-50%);
     top: 50%;
 }
+
+
+/* ON affiche le menu lorsqu'on clique sur le burger menu */
+
+
+/* initialement le header en responsive il est poussé en dehors de l'écran avec la propriété right:-100%; */
+
+
+/* Donc si right est à 0% la barre est visible */
 
 .header__nav.active {
     right: 0%;
@@ -236,6 +281,8 @@ h2 {
     .nav__list {
         padding-left: 0px;
     }
+    /* ici on reforme le header__nav pour qu'il fite avec un affichage mobile comme nike */
+    /* on retrouvle le right -100% */
     .header__nav {
         z-index: 9999;
         position: fixed;
@@ -276,6 +323,12 @@ h2 {
 @media(min-width:2000px) {}
 
 @media screen and (max-width:768px) {} */
+
+
+/* mise en forme de la page à l'impression  */
+
+
+/* n'hésitez pas à tester si vous imprimez la page, le header ne sera pas visible  */
 
 @media print {
     .header__main {
