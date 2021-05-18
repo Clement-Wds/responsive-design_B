@@ -1,3 +1,4 @@
 {
-    "discord.detailsEditing": "Coding {file_name}"
+    "discord.detailsEditing": "Coding {file_name}",
+    "discord.lowerDetailsEditing": "{workspace}"
 }
